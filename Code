@@ -1,0 +1,563 @@
+import random 
+import time
+import sys
+
+import winsound
+winsound.PlaySound("RnBLove_WIP.wav", winsound.SND_LOOP | winsound.SND_ASYNC)
+
+
+#difficulty = input.int("Choose your difficulty between 1 = easy or 2 = medium: ").strip()
+
+health = 50
+monster_health = 100
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+
+
+
+print("As you are walking trought the forest, a monster awaits you.")
+time.sleep(4) #sleep for 5 seconds
+print("As you go trought your options, you only remain with 2 possibilities. You either attack or run.")
+time.sleep(4) #sleep for 4 seconds
+fate = input("Now you decide: run or attack?: ").strip()
+print("-" * 20)
+
+
+
+if fate == "run":
+    print("You managed to escape on the brink of death. Now you have another day to fight.")
+    time.sleep(3)
+    print("Good luck on your next run!")
+    time.sleep(3)
+    sys.exit()
+else:
+    print("Your fight begins")
+    time.sleep(2)
+    print("Your current Life:")
+    print(health)
+    time.sleep(2)
+
+#ROUND 1
+action1 = input("Would you like to attack or use potion?: ")  
+
+if action1 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action1 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(1)
+    print(potion_health)
+    time.sleep(1)
+    print("Your current HP: ")
+    time.sleep(1)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+#ROUND 2
+
+action2 = input("Would you like to attack or use potion?: ")
+
+if action2 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action2 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(1)
+    print(potion_health)
+    time.sleep(1)
+    print("Your current HP: ")
+    time.sleep(1)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+#ROUND 3
+
+action3 = input("Would you like to attack or use potion?: ")
+
+if action3 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action3 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 4
+
+action4 = input("Would you like to attack or use potion?: ")
+
+if action4 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action4 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 5
+
+action5 = input("Would you like to attack or use potion?: ")
+
+if action5 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action5 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 6
+
+action6 = input("Would you like to attack or use potion?: ")
+
+if action6 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action6 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 7
+
+action7 = input("Would you like to attack or use potion?: ")
+
+if action6 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action7 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 8
+
+action8 = input("Would you like to attack or use potion?: ")
+
+if action8 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action8 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 9
+
+action9 = input("Would you like to attack or use potion?: ")
+
+if action9 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action9 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
+
+#ROUND 10
+
+action10 = input("Would you like to attack or use potion?: ")
+
+if action10 == "attack":
+    print("Your Damage")
+    print(attack)
+    time.sleep(1)
+    print("Current Monster HP")
+    print(monster_health - attack)
+    monster_health = monster_health - attack
+    time.sleep(1)
+    print("-" * 20)
+
+elif action10 == "potion":
+    print("Increase in HP by Potion: ")
+    time.sleep(0.5)
+    print(potion_health)
+    time.sleep(0.5)
+    print("Your current HP: ")
+    time.sleep(0.5)
+    print(health + potion_health)
+    health = health + potion_health
+    time.sleep(1)
+    print("-" * 20)
+
+print("It is the monster's turn now")
+time.sleep(1.5)
+print("The Monster attacks you for the value of: ")
+print(monster_attack)
+time.sleep(1)
+print("Your current HP: ")
+time.sleep(1)
+print(health - monster_attack)
+health = health - monster_attack
+time.sleep(1.5)
+print("-" * 20)
+
+attack = int(random.randint(20,30))
+monster_attack = int(random.randint(15,25))
+potion_health = int(random.randint(25,50))
+
+if health <= 0:
+    print("Oh no, the monster killed you")
+    time.sleep(2)
+    print("Better Luck next time")
+    time.sleep(2)
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    sys.exit()
+
+if monster_health <= 0:
+    print("Nice. You done it. You survived")
+    time.sleep(3)
+    sys.exit()
